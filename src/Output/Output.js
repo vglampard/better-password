@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Output() {
+export default function Output({password}) {
   return (
-    <div>Output</div>
+    <div>password: {password}</div>
   )
 }
