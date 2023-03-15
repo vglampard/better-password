@@ -8,7 +8,7 @@ function App() {
 const [input, setInput] = useState("")
 const [salt, setSalt] = useState("")
 const [password, setPassword] = useState("")
-const PEPPER = process.env.REACT_APP_PEPPER
+// const PEPPER = process.env.REACT_APP_PEPPER
 const STATES = {
   "input": input, 
   "setInput": setInput,
