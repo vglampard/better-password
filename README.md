@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# BETTER PASSWORD => APP IN PROGRESS!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Are your passwords bad?
 
-## Available Scripts
+In spite of all messaging to the contrary, many MANY people are still using weak passwords, or identical/similar passwords across all platforms. 
 
-In the project directory, you can run:
+I get it! It's a pain, and whilst password managers are excellent, they can also be a bit of hassle.
 
-### `npm start`
+If you rely on them to remember all your passwords, YOU don't. Which can leave you out in the cold if you're trying to get into an account from a shared or public device. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+SO. I was looking into hashing, salting, and peppering, and thought - this seems like it could help solve some of our, ahem, password woes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# THE APP
+Better password helps you create complex passwords and keep track of them reliably. Without a password manager!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Put in a weak password (say, the name of the company you're signing up with) add a bit of personalised salt (say, your name) hit 'create password'. It'll spit you out a 22 character long version that contains upper and lower case letters, special characters, numbers, and all of it hashed using sha256 and lightly peppered to taste. 
 
-### `npm run build`
+What's the use case? Well, it creates highly secure passwords, but all users need to remember is, in theory, two words! Firstly, the keyword you used for that account, and secondly, the salt - which you can keep the same across all passwords. Plug these two strings in, and it'll return you the same complex password every time. It's like having a personal password dictionary!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It LOOSELY applies the ideas of salting, peppering, and hashing to ensure that if you put in the same simple keywords each time, you'll get the same complex password hash out the other end. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# NEXT STEPS
+I'll be adding different hashing function options for users who want an added layer of obscurity. 
