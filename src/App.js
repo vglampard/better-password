@@ -2,13 +2,15 @@ import './App.css';
 import Input from './Input/Input';
 import { useState } from 'react';
 import Output from './Output/Output';
+import { hash } from './constants/hashFunction';
+// require('dotenv').config()
 
 function App() {
 
 const [input, setInput] = useState("")
 const [salt, setSalt] = useState("")
 const [password, setPassword] = useState("")
-
+const PEPPER = process.env.REACT_APP_PEPPER
 const STATES = {
   "input": input, 
   "setInput": setInput,
@@ -18,11 +20,12 @@ const STATES = {
   "setPassword": setPassword,
 }
 
-function handleClick(input, salt){
+async function handleClick(input, salt){
   // function that CREATES S&P&H password (e.g. here for checks)
-  let arr = (input+salt).split('')
-arr.splice(1, 0, "$");
-setPassword(arr.join(''));
+  let hashed = await hash(input+salt)
+  console.log("HASHED:", hashed)
+  console.log("pepper:", PEPPER)
+setPassword(hashed);
 }
 
 
