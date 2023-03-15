@@ -18,19 +18,18 @@ const STATES = {
   "setPassword": setPassword,
 }
 
-function handleClick(password, salt, setPassword){
-  // function that CREATES S&P&H password
-let newPassword = password.splice(0, 1, "$") + salt;
-console.log("NP:", newPassword)
-setPassword(newPassword);
+function handleClick(input, salt){
+  // function that CREATES S&P&H password (e.g. here for checks)
+  let arr = (input+salt).split('')
+arr.splice(1, 0, "$");
+setPassword(arr.join(''));
 }
 
   return (
     <div className="App">
       <header className="App-header">
-       <Input STATES={STATES} handleClick={()=>handleClick(password, salt, setPassword)}/>
-       <Output states={STATES}/>
-
+       <Input STATES={STATES} handleClick={()=>handleClick(input, salt)}/>
+       <Output password={STATES.password}/>
       </header>
     </div>
   );
