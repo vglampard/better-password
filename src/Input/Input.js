@@ -20,7 +20,7 @@ export default function Input({ STATES, handleClick }) {
         value={salt}
         placeholder="salt here"
       />
-      <buttton onClick={handleClick}>Create password</buttton>
+      <button onClick={handleClick}>Create password</button>
     </div>
   );
 }
