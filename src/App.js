@@ -11,7 +11,6 @@ function App() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-
   const STATES = {
     input,
     setInput,
