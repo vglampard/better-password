@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.password{
+background-color: rgb(254, 141, 141);
+line-height: 2;
+border-radius: 20px;
+padding-left: 10px;
+padding-right: 10px;
+border-style: solid;
+}
+
 .App-header {
   /* background-image: url("./yellowCircle.png");
   background-size: cover; */

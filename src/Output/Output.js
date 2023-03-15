@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Output({password}) {
   return (
-    <div> {password ? "Your better password:" + password : ""}</div>
+    <div className="password"> {password ? "Your better password: " + password : ""}</div>
   )
 }

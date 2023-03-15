@@ -44,7 +44,7 @@ function App() {
             />
           </div>
           <div className="output-container">
-            <Output password={STATES.password} />
+            {password !== "" &&<Output password={STATES.password} />}
           </div>
           <img
             src={clipboardIcon}
