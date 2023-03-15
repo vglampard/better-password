@@ -3,16 +3,15 @@ import Input from "./Input/Input";
 import { useState } from "react";
 import Output from "./Output/Output";
 import { buildPassword, hash } from "./constants/hashFunction";
-import clipboardIcon from "./copy-content.png";
 import Hero from "./Hero/Hero";
-// import Instructions from "./Instructions/Instructions";
+import Instructions from "./Instructions/Instructions";
 
 function App() {
   const [input, setInput] = useState("");
   const [salt, setSalt] = useState("");
   const [password, setPassword] = useState("");
   const [explanation, setExplanation] = useState(false);
-  const [instructions, setInstructions] = useState(false)
+  const [instructions, setInstructions] = useState(false);
   const STATES = {
     input,
     setInput,
@@ -20,8 +19,10 @@ function App() {
     setSalt,
     password,
     setPassword,
-   explanation, setExplanation,
-   instructions, setInstructions
+    explanation,
+    setExplanation,
+    instructions,
+    setInstructions,
   };
 
   async function handleClick(input, salt) {
@@ -35,7 +36,7 @@ function App() {
       <header className="App-header">
         <div className="app-container">
           <div className="hero-container">
-<Hero/>
+            <Hero />
           </div>
           <div className="input-container">
             <Input
@@ -44,16 +45,13 @@ function App() {
             />
           </div>
           <div className="output-container">
-            {password !== "" &&<Output password={STATES.password} />}
+            {password !== "" && <Output password={STATES.password} />}
           </div>
-          <img
-            src={clipboardIcon}
-            alt="clipboard icon"
-            onClick={() => navigator.clipboard.writeText(password)}
-          />
-          {/* <button onClick={()=>{setInstructions(!instructions)}}>Instructions</button>
-          <button>More Info</button>
-          {instructions && <Instructions/>} */}
+         
+          <button onClick={()=>{setInstructions(!instructions)}}>Instructions</button>
+          {/* <button>More Info</button> */}
+          {instructions && <Instructions/>}
+
         </div>
       </header>
     </div>
