@@ -12,13 +12,13 @@ export default function Input({ STATES, handleClick }) {
         onChange={(e) => handleChange(e, setInput)}
         type="text"
         value={input}
-        placeholder="password here"
+        placeholder="Keyword here..."
       />
       <input
         onChange={(e) => handleChange(e, setSalt)}
         type="text"
         value={salt}
-        placeholder="salt here"
+        placeholder="Your salt here..."
       />
       <button onClick={handleClick}>Create/Retrieve</button>
     </div>
