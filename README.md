@@ -1,4 +1,4 @@
-# BETTER PASSWORD => APP IN PROGRESS!
+# BetterPassword => APP IN PROGRESS!
 
 ## Are your passwords bad?
 
