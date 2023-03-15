@@ -3,19 +3,21 @@
 }
 
 .App-header {
-  background-color: #ffffff;
+  /* background-image: url("./yellowCircle.png");
+  background-size: cover; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 0.5vmin);
   color: rgb(37, 36, 36);
 }
 .app-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 500px;
 }
 
 .input-container{
@@ -24,6 +26,9 @@
 
 .output-container{
   padding: 10px
+}
+li {
+  text-align: left;
 }
 
 img{
@@ -37,6 +42,7 @@ padding: 5px;
 input{
   border-radius:15px;
   padding: 10px;
+  font-size: 10px;
 }
 
 
@@ -46,6 +52,10 @@ img:focus {
 }
 img:hover {
   background-color: rgb(216, 219, 222);
+}
+
+.logo{
+  width:60vw;
 }
 
 button {

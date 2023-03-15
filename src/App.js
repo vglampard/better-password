@@ -4,13 +4,15 @@ import { useState } from "react";
 import Output from "./Output/Output";
 import { buildPassword, hash } from "./constants/hashFunction";
 import clipboardIcon from "./copy-content.png";
+import Hero from "./Hero/Hero";
+// import Instructions from "./Instructions/Instructions";
 
 function App() {
   const [input, setInput] = useState("");
   const [salt, setSalt] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
+  const [explanation, setExplanation] = useState(false);
+  const [instructions, setInstructions] = useState(false)
   const STATES = {
     input,
     setInput,
@@ -18,8 +20,8 @@ function App() {
     setSalt,
     password,
     setPassword,
-    showPassword,
-    setShowPassword,
+   explanation, setExplanation,
+   instructions, setInstructions
   };
 
   async function handleClick(input, salt) {
@@ -32,6 +34,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="app-container">
+          <div className="hero-container">
+<Hero/>
+          </div>
           <div className="input-container">
             <Input
               STATES={STATES}
@@ -46,6 +51,9 @@ function App() {
             alt="clipboard icon"
             onClick={() => navigator.clipboard.writeText(password)}
           />
+          {/* <button onClick={()=>{setInstructions(!instructions)}}>Instructions</button>
+          <button>More Info</button>
+          {instructions && <Instructions/>} */}
         </div>
       </header>
     </div>
