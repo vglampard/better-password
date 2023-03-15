@@ -13,9 +13,9 @@ for (let i=0;i<arr1.length;i++){
 return combined.join('')
 }
 
-export function buildPassword(hashedInput, salt, pepper){
+export function buildPassword(hashedInput, salt){
 let strongBaseFirst = (hashedInput.slice(0, 10))+salt.slice(0,1).split('');
-let strongBaseSecond= ("?!$7_?27" + pepper[0] + pepper[1]).split('');
+let strongBaseSecond= ("?!$7_?27" + salt[0].toUpperCase() + salt[1].toLowerCase()).split('');
 let strongPassword = alternatingCombine(strongBaseFirst, strongBaseSecond);
 return strongPassword;
 }

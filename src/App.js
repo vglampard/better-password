@@ -8,6 +8,7 @@ function App() {
 const [input, setInput] = useState("")
 const [salt, setSalt] = useState("")
 const [password, setPassword] = useState("")
+const PEPPER = process.env.REACT_APP_PEPPER
 const STATES = {
   "input": input, 
   "setInput": setInput,
@@ -18,11 +19,9 @@ const STATES = {
 }
 
 async function handleClick(input, salt){
-  // function that CREATES S&P&H password (e.g. here for checks)
-  const PEPPER = process.env.REACT_APP_PEPPER
-  let hashed = await hash(input+salt+PEPPER)
-  console.log("pepper:", PEPPER)
-let strongPassword = buildPassword(hashed, salt, PEPPER)
+  let hashed = await hash(input+salt)
+
+let strongPassword = buildPassword(hashed, salt)
 console.log("STRONG PASSWORD:", strongPassword)
 setPassword(strongPassword);
 }
