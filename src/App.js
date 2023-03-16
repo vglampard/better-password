@@ -31,6 +31,7 @@ function App() {
     setPassword(strongPassword);
   }
 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -38,6 +39,7 @@ function App() {
           <div className="hero-container">
             <Hero />
           </div>
+          <div className="contents">
           <div className="input-container">
             <Input
               STATES={STATES}
@@ -47,11 +49,17 @@ function App() {
           <div className="output-container">
             {password !== "" && <Output password={STATES.password} />}
           </div>
-         
-          <button onClick={()=>{setInstructions(!instructions)}}>Instructions</button>
-          {/* <button>More Info</button> */}
-          {instructions && <Instructions/>}
 
+          <button
+            onClick={() => {
+              setInstructions(!instructions);
+            }}
+          >
+            Instructions
+          </button>
+          {/* <button>More Info</button> */}
+          {instructions && <Instructions />}
+          </div>
         </div>
       </header>
     </div>

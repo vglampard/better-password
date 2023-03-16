@@ -61,8 +61,16 @@ li {
   text-align: left;
 }
 
+.hero-text{
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 1.5rem;
+  text-align: right;
+}
+
+
 img {
-  width: 2vw;
+  width: 1.5vw;
   border-radius: 5px;
   margin: 2px;
   padding: 5px;
