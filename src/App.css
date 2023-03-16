@@ -1,17 +1,16 @@
 .App {
   text-align: center;
- 
 }
 
-.password{
-background-color: rgb(254, 141, 141);
-line-height: 1.5;
-border-radius: 20px;
-padding-left: 10px;
-padding-right: 10px;
-border-style: solid;
-display: flex;
-align-items: center;
+.password {
+  background-color: rgb(254, 141, 141);
+  line-height: 1.5;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
 }
 
 .App-header {
@@ -22,37 +21,37 @@ align-items: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: .65rem;
+  font-size: 0.65rem;
   color: rgb(37, 36, 36);
 }
-.app-container{
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 500px;
 }
 
-.input-container{
-display: flex;
+.input-container {
+  display: flex;
 }
 
-.output-container{
-  padding: 10px
+.output-container {
+  padding: 10px;
 }
 li {
   text-align: left;
 }
 
-.hero-text{
+.hero-text {
   display: flex;
   gap: 10px;
   line-height: 1rem;
   padding-bottom: 30px;
   align-items: center;
-justify-content: center;
+  justify-content: center;
 }
 
-.instructions{
+.instructions {
   background-color: pink;
   max-width: 75vw;
   border-radius: 20px;
@@ -62,20 +61,18 @@ justify-content: center;
   text-align: left;
 }
 
-img{
-width: 2vw;
-border-radius: 5px;
-margin: 2px;
-padding: 5px;
-
+img {
+  width: 2vw;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
 }
 
-input{
-  border-radius:15px;
+input {
+  border-radius: 15px;
   padding: 10px;
   font-size: 10px;
 }
-
 
 img:focus {
   outline: 2px solid transparent;
@@ -85,25 +82,28 @@ img:hover {
   background-color: rgb(216, 219, 222);
 }
 
-.logo{
-  width:300px;
-padding-left: 10vw;
+.logo {
+  max-width: 500px;
+  padding-left: 5px;
+  width: 50vw;
 }
 
 button {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   max-width: 200px;
   border: 0;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-sizing: border-box;
   color: #111827;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: .65rem;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.65rem;
   font-weight: 600;
   line-height: 0.25rem;
-  padding: .5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   text-align: center;
-  text-decoration: none #D1D5DB solid;
+  text-decoration: none #d1d5db solid;
   margin-top: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;

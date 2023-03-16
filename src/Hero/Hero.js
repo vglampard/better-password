@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Hero() {
-  const notify = () => toast("You could get a secure password generated and stored in a manager. But that's not always convenient. Here, all you need to do is remember your keyword, remember your salt word, and you can retrieve and copy that secure password at any time!");
+  const notify = () => toast("You could get a secure password generated and stored in a manager. But that's not always convenient. Here, all you need to do is remember the keyword, remember your salt word, and you can retrieve that auto-generated, sha256-hashed and salted all-requirements-meeting secure code any time!");
 
   return (
     <div>
