@@ -57,7 +57,6 @@ function App() {
           >
             Instructions
           </button>
-          {/* <button>More Info</button> */}
           {instructions && <Instructions />}
           </div>
         </div>
