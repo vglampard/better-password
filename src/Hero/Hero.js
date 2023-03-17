@@ -7,7 +7,7 @@ export default function Hero() {
  
   const notify = () =>
     toast(
-      "Auto-generated, sha256-hashed and salted all-requirements-meeting secure passwords, retrievabl every time with just two simple keywords!"
+      "Auto-generated, sha256-hashed and salted all-requirements-meeting secure passwords, retrievable every time with just two simple keywords!"
     );
   return (
     <div>
