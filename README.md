@@ -1,4 +1,4 @@
-# BetterPassword => APP IN PROGRESS!
+# BetterPassword => Work in progress!
 
 ## Are your passwords bad?
 
@@ -18,7 +18,7 @@ Put in a weak password (say, the name of the company you're signing up with) add
 
 What's the use case? Well, it creates highly secure passwords, but all users need to remember is, in theory, two words! Firstly, the keyword you used for that account, and secondly, the salt - which you can keep the same across all passwords. Plug these two strings in, and it'll return you the same complex password every time. It's like having a personal password dictionary!
 
-It LOOSELY applies the ideas of salting, peppering, and hashing to ensure that if you put in the same simple keywords each time, you'll get the same complex password hash out the other end. 
+It loosely applies the ideas of salting, peppering, and hashing to ensure that if you put in the same simple keywords each time, you'll get the same complex password hash out the other end - with the added capital letters, special characters, and so forth that most good companies require for login. 
 
 # NEXT STEPS
-I'll be adding different hashing function options for users who want an added layer of obscurity. And I originally had peppering added using an env variable, but Netlify was having none of it - so that's on the way too. 
+I'll be adding different hashing function options for users who want an added layer of obscurity. And I originally had peppering added using an env variable, but Netlify was having none of it initally - so that's on the way too. 
