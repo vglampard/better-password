@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from "framer-motion"
 
 
 export default function Instructions() {
@@ -16,7 +15,7 @@ export default function Instructions() {
         <li>Hit 'create password.' Job done!</li>
         <li>To retrieve your secure password, simply plug in the keyword and salt, and hit retrieve!</li>
     </ol>
-    <p>With the same keyword and salt, you're guaranteed to get the same secure password output every time. No password 'storage' in a word file, notepad, or manager. And retrieving it is as easy as remembering a couple of memorable words.</p>
+    <p>With the same keyword and salt, you'll get the same secure password output every time. No password 'storage' in a word file, notepad, or manager. And retrieving it is as easy as remembering a couple of simple words.</p>
     </div>
   )
 }
