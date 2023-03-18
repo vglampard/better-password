@@ -1,21 +1,17 @@
 .App {
-  text-align: center;
+  text-align: right;
 }
 
 .password {
-  background-color: rgb(254, 141, 141);
   line-height: 1.5;
   border-radius: 20px;
   padding-left: 10px;
-  padding-right: 10px;
-  border-style: solid;
+
   display: flex;
   align-items: center;
 }
 
 .App-header {
-  /* background-image: url("./yellowCircle.png");
-  background-size: cover; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,30 +25,42 @@
   flex-direction: column;
   align-items: center;
   max-width: 500px;
+  margin: 20px;
 }
 
-.input-container {
+.contents{
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.input-container {
+max-width: 90%;
+display: flex;
+justify-content: flex-end;
 }
 
 .output-container {
-  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 li {
   text-align: left;
 }
 
-.hero-text {
-  display: flex;
-  gap: 10px;
-  line-height: 1rem;
-  padding-bottom: 30px;
-  align-items: center;
-  justify-content: center;
+.hero-container{
+  max-width: 500px;
+}
+.hero-text{
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 1.5rem;
+  text-align: right;
 }
 
 .instructions {
-  background-color: pink;
+  background-color: rgb(255, 218, 224);
   max-width: 75vw;
   border-radius: 20px;
   margin: 15px;
@@ -61,16 +69,11 @@ li {
   text-align: left;
 }
 
-.hero-text{
-  font-size: 30px;
-  font-weight: bolder;
-  line-height: 1.5rem;
-  text-align: right;
-}
+
 
 
 img {
-  width: 1.5vw;
+  width: 20px;
   border-radius: 5px;
   margin: 2px;
   padding: 5px;
