@@ -5,6 +5,7 @@ import Output from "./Output/Output";
 import { buildPassword, hash } from "./constants/hashFunction";
 import Hero from "./Hero/Hero";
 import Instructions from "./Instructions/Instructions";
+import { motion } from "framer-motion"
 
 function App() {
   const [input, setInput] = useState("");
@@ -39,13 +40,14 @@ function App() {
           <div className="hero-container">
             <Hero />
           </div>
+      
           <div className="contents">
-          <div className="input-container">
+         
             <Input
               STATES={STATES}
               handleClick={() => handleClick(input, salt)}
             />
-          </div>
+          
           <div className="output-container">
             {password !== "" && <Output password={STATES.password} />}
           </div>
@@ -57,8 +59,13 @@ function App() {
           >
             Instructions
           </button>
-          {/* <button>More Info</button> */}
-          {instructions && <Instructions />}
+          {instructions && 
+              <motion.div
+              initial={{ x: "-100%" }}
+  animate={{ x: "calc(6vw)" }}
+           
+            >  <Instructions /></motion.div>} 
+        
           </div>
         </div>
       </header>

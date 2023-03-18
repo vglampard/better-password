@@ -7,7 +7,7 @@ export default function Input({ STATES, handleClick }) {
     setValue(e.target.value);
   }
   return (
-    <div>
+    <div className="input-container">
       <input
         onChange={(e) => handleChange(e, setInput)}
         type="text"

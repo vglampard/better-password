@@ -11,9 +11,8 @@ export default function Hero() {
     );
   return (
     <div>
-        {/* <img src={logo} alt="text that reads: your better password" className="logo"/> */}
         <div className="hero">
-        <p className="hero-text">SECURE PASSWORDS, MADE MEMORABLE (MVP)<img src = {info} alt="information" onClick={notify}/></p>
+        <p className="hero-text">SECURE PASSWORDS, MADE MEMORABLE<img src = {info} alt="information" onClick={notify}/></p>
       
   <ToastContainer />
         </div>
