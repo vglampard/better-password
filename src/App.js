@@ -14,7 +14,6 @@ import particlesOptions from "./particlesData/particlesOptions.js";
 import { toast } from "react-toastify";
 
 function App() {
-console.log("PEPPER", process.env.REACT_APP_PEPPER)
   const [input, setInput] = useState("");
   const [salt, setSalt] = useState("");
   const [password, setPassword] = useState("");
@@ -33,18 +32,20 @@ console.log("PEPPER", process.env.REACT_APP_PEPPER)
     setInstructions,
   };
   const isMounted = useRef(false);
-
+  const PEPPER = process.env.REACT_APP_PEPPER;
   const output = () => toast(<Output password={password} />);
 
   async function handleClick(input, salt) {
-    let hashed = await hash(input + salt);
+    let hashed = await hash(input + salt + PEPPER);
     let strongPassword = buildPassword(hashed, salt);
     setPassword(strongPassword);
   }
 
   useEffect(() => {
     if (isMounted.current) output();
-    else {isMounted.current = true;}
+    else {
+      isMounted.current = true;
+    }
   }, [password]);
 
   const particlesInit = useCallback(async (Engine) => {
