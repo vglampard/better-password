@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "./App.css";
 import Input from "./Input/Input";
 import { useState, useEffect, useRef } from "react";
@@ -13,7 +14,7 @@ import particlesOptions from "./particlesData/particlesOptions.js";
 import { toast } from "react-toastify";
 
 function App() {
-
+console.log("PEPPER", process.env.REACT_APP_PEPPER)
   const [input, setInput] = useState("");
   const [salt, setSalt] = useState("");
   const [password, setPassword] = useState("");
