@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import { Container, Engine } from "tsparticles-engine";
 import particlesOptions from "./particlesData/particlesOptions.js";
 
 function App() {
@@ -44,7 +43,6 @@ function App() {
   }, []);
 
   const particlesLoaded = useCallback(async (Container) => {
-    await console.log(Container);
   }, []);
   return (
     <div className="App">

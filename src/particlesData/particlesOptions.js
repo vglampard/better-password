@@ -1,28 +1,25 @@
-//https://code.tutsplus.com/tutorials/particles-js-control-particle-count-and-shape--cms-26290
-
-const rainOptions = {
+const particlesOptions = {
+    
     particles: {
       number: {
-        value: 20,
+        value: 10,
         density: {
           enable: false,
         },
       },
+      "color": {
+        "value": "#faf5f5"
+      },
       shape: {
         type: ["circle"],
-        // image: {
-        //   src: "https://media.licdn.com/dms/image/C4D03AQH-IsICbaHY6A/profile-displayphoto-shrink_100_100/0/1598280247239?e=1678924800&v=beta&t=R50TLUrWJW8W10wJ3MlIyPKdw4oLGcu9j9eZbuwllnI",
-        //   width: 1,
-        //   height: 1,
-        // },
       },
       "size": {
-          "value": 100, 
+          "value": 200, 
           "random": true,
           "anim": {
             "enable": true,
-            "speed": 20,
-            "size_min": 10,
+            "speed": 1,
+            "size_min": 20,
             "sync": false
           }
         },
@@ -31,7 +28,7 @@ const rainOptions = {
       },
       move: {
         enable: true,
-        speed: 10,
+        speed: 5,
         random: false,
         straight: false,
       },
@@ -45,15 +42,10 @@ const rainOptions = {
         onHover: {
           enable: true,
           mode: "repulse",
-          parallax: {
-            enable: false,
-            force: 60,
-            smooth: 10,
-          },
         },
       },
     },
   };
   
-  export default rainOptions;
+  export default particlesOptions;
   
