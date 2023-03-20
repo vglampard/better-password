@@ -12,13 +12,12 @@ export default function Instructions() {
           Pick a unique <span>KEYWORD</span> for the account you're making this password for.{" "}
         </li>
         <li>
-          Pick a 'SALT' - this is a word you'll reuse across all passwords, so
-          make it MEMORABLE and GENERAL. Your name, perhaps?
+          Pick a <span>SALT</span> - this is a generic word you use across all passwords. Make it memorable! And 3 letters or more. 
         </li>
-        <li>Hit 'create password.' Job done!</li>
+        <li>Hit <span>GET</span> and paste it before crossing the popup!</li>
         <li>
           To retrieve your secure password, simply plug in the keyword and salt,
-          and hit retrieve!
+          and hit <span>GET</span>!
         </li>
       </ol>
       <p>
