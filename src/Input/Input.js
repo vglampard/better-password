@@ -6,6 +6,7 @@ export default function Input({ STATES, handleClick }) {
   function handleChange(e, setValue) {
     setValue(e.target.value);
   }
+
   return (
     <div className="input-container">
       <input
@@ -19,8 +20,9 @@ export default function Input({ STATES, handleClick }) {
         type="text"
         value={salt}
         placeholder="Your salt here..."
+        minlength="3"
       />
-      <button onClick={handleClick}>Create/Retrieve</button>
+      <button onClick={handleClick}>Get</button>
     </div>
   );
 }

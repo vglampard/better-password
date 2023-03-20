@@ -1,14 +1,17 @@
 .App {
   text-align: center;
+  background-color: #f6eeee;
 }
 
 .password {
   line-height: 1.5;
   border-radius: 20px;
   padding-left: 10px;
-
   display: flex;
   align-items: center;
+}
+span{
+  font-weight: bold;
 }
 
 .App-header {
@@ -21,12 +24,14 @@
   color: rgb(37, 36, 36);
 }
 .app-container {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 500px;
   padding-right: 20px;
-
+  width: 100vw;
 }
 
 .contents{
@@ -48,8 +53,15 @@ align-items: center;
 }
 li {
   text-align: left;
+  background-color: #fff7fa;
+  margin: 5px;
+  border-radius: 10px;
 }
-
+.particles{
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
 .hero-container{
   max-width: 500px;
 }
@@ -64,8 +76,8 @@ li {
   background-color: #ffecf2;
   max-width: 75vw;
   border-radius: 20px;
-  margin: 15px;
-  padding: 10px;
+  margin: 20px;
+  padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-align: left;
 }
@@ -98,8 +110,9 @@ input {
       border-color: #f3aec4;
       background: #fff;
   }
-  
-
+ :invalid {
+    border: 2px dashed red;
+  }
 
 img:focus {
   outline: 2px solid transparent;
@@ -107,12 +120,6 @@ img:focus {
 }
 img:hover {
   background-color: #ffecf2;
-}
-
-.logo {
-  max-width: 500px;
-  padding-left: 5px;
-  width: 50vw;
 }
 
 button {
@@ -128,7 +135,6 @@ button {
   padding: 0.5rem 0.5rem;
   text-align: center;
   text-decoration: none #d1d5db solid;
-  /* margin-top: 5px; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   user-select: none;
