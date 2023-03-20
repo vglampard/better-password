@@ -20,7 +20,7 @@ export default function Input({ STATES, handleClick }) {
         type="text"
         value={salt}
         placeholder="Your salt here..."
-        minlength="3"
+        minLength="3"
       />
       <button onClick={handleClick}>Get</button>
     </div>
