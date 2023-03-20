@@ -7,6 +7,12 @@ import Hero from "./Hero/Hero";
 import Instructions from "./Instructions/Instructions";
 import { motion } from "framer-motion"
 
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { Container, Engine } from "tsparticles-engine";
+
+
 function App() {
   const [input, setInput] = useState("");
   const [salt, setSalt] = useState("");
