@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Hero() {
   const notify = () =>
     toast(
-      "Auto-generated, sha256-hashed and salted all-requirements-meeting, secure passwords. Unfailingly retrievable, with just two words!"
+      "Auto-generated, sha256-hashed, peppered, salted, & all-requirements-meeting secure passwords. Unfailingly retrievable, with just two words!"
     );
   return (
     <div>
