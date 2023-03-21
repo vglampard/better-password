@@ -19,3 +19,10 @@ let strongBaseSecond= ("?!$7_?27" + salt[0].toUpperCase() + salt[1].toLowerCase(
 let strongPassword = alternatingCombine(strongBaseFirst, strongBaseSecond);
 return strongPassword;
 }
+
+export function buildNoUnderscorePassword(hashedInput, salt){
+    let strongBaseFirst = (hashedInput.slice(0, 10))+salt.slice(0,1).split('');
+    let strongBaseSecond= ("?!$7?27" + salt[0].toUpperCase() + salt[1].toLowerCase()).split('');
+    let strongPassword = alternatingCombine(strongBaseFirst, strongBaseSecond);
+    return strongPassword;
+    }
