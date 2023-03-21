@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Input({ STATES, handleClick }) {
+export default function Input({ STATES, handleClick, handleClickNoUnderscore }) {
   const { input, setInput, salt, setSalt } = STATES;
 
   function handleChange(e, setValue) {
@@ -22,6 +22,8 @@ export default function Input({ STATES, handleClick }) {
         placeholder="Your salt here..."
       />
       <button onClick={handleClick}>Get</button>
+      <button onClick={handleClickNoUnderscore}>Get (no underscore!)</button>
+      
     </div>
   );
 }

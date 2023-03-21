@@ -3,7 +3,7 @@ import "./App.css";
 import Input from "./Input/Input";
 import { useState, useEffect, useRef } from "react";
 import Output from "./Output/Output";
-import { buildPassword, hash } from "./constants/hashFunction";
+import { buildPassword, hash, buildNoUnderscorePassword } from "./constants/hashFunction";
 import Hero from "./Hero/Hero";
 import Instructions from "./Instructions/Instructions";
 import { motion } from "framer-motion";
@@ -41,6 +41,14 @@ function App() {
     setPassword(strongPassword);
   }
 
+  async function handleClickNoUnderscore(input, salt) {
+    let hashed = await hash(input + salt + PEPPER);
+    let strongPassword = buildNoUnderscorePassword(hashed, salt);
+    setPassword(strongPassword);
+  }
+
+  
+
   useEffect(() => {
     if (isMounted.current) output();
     else {
@@ -72,6 +80,7 @@ function App() {
             <Input
               STATES={STATES}
               handleClick={() => handleClick(input, salt)}
+              handleClickNoUnderscore = {()=>handleClickNoUnderscore(input, salt)}
             />
 
             <button
